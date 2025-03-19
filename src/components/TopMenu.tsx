@@ -14,12 +14,12 @@ export default async function TopMenu(){
             {/* Sign-in/Sign-out on the left side */}
             <div className={styles.leftSide}>
                 {session 
-                    ? <Link href="/api/auth/signout" className={styles.menuItem}>
+                    ? <Link href="/api/auth/signout?callbackUrl=/" className={styles.menuItem}>
                         Sign-Out of {session.user?.name}
                       </Link>
-                    : <Link href="/api/auth/signin" className={styles.menuItem}>
-                        Sign-In
-                      </Link>
+                    : <Link href="/api/auth/signin?callbackUrl=/" className={styles.menuItem}>
+                         Sign-In
+                        </Link>
                 }
             </div>
             
